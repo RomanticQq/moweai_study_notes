@@ -1,0 +1,7 @@
+1.在原图上画框  输出的图不是黑白的图了  而是彩色的图上画框
+2.原图是img_origin
+3.mask_ing是生成的mask_ing，即有缺陷的区域
+4.mask_ing画在原图上需要对mask_ing做一个相反的操作，和原图img_origin对应起来
+5.实际训练的数据是从generate_data中拿到的  但是原始数据是在train_data  需要对train_data进行过滤，才放到generate_data 防止数据有问题
+6.对数据过滤的过程的源码放在mowe->train_service
+7.generate_data的mask数据是自动生成的
