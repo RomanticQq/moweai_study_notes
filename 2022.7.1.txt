@@ -1,0 +1,7 @@
+1.nn.BatchNorm2d(n) n不能等于1
+2.在对图片进行拼接时一定要保证图片的格式相等，不能采取直接修改后缀名的方法，这样会在运行的过程中报错；
+3.cv2.imdecode(np.fromfile(full_path, dtype=np.uint8), param)
+4.cv2.imencode(suffix, img_data)[1].tofile(full_path)
+5. out_mask = np.zeros((h1,w))
+    out_mask[:,:w1-intersection_gap] = mask_list[0][:,:w1-intersection_gap]
+    out_mask[:,w1-intersection_gap:] = mask_list[1,:,:][:,intersection_gap:]

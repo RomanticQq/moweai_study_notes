@@ -1,0 +1,27 @@
+1.infiniband
+2.mellanox
+3.ray框架
+4.blender
+5.seamless clone
+6.贴图
+7.对于检测不到的缺陷，可能是因为缺陷标注太少，人工制造缺陷
+8.好的模型，即使用很少的数据也可以训练出很好的效果
+9.对于有些检测目标不稳定：可能是因为颜色浅，和周围信息差别不大；还可能是因为目标太小，经过下采样后，特征信息几乎就消失了，可以采用对图像进行分割的方法，将图像一分为二；
+10.好的数据即使是很差的模型也能跑出很好的效果；
+
+
+
+# import numpy as np
+# def exe(params):
+#     img = params['out_img']
+#     _, img_h, img_w = img.shape
+#     img1_segment_h = img_h / 2
+#     img2_segment_h = img_w / 2
+#     img1 = img[:, 0:img1_segment_h + 100, 0:img1_segment_h + 100]
+#     img2 = img[:, img2_segment_h-100:img_h, img2_segment_h-100:img_w]
+#     img1 = np.uint8(img1)
+#     img2 = np.uint8(img2)
+#     img = list()
+#     img.append(img1)
+#     img.append(img2)
+#     return {'out_img':img}
